@@ -1,47 +1,62 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title></title>
-</head>
+	<head>
+		<title>Stay || Leave</title>
+		<script type="text/javascript">
+  		var timeout = setTimeout("location.reload(true);",60000);
+  		function resetTimeout() {
+    	clearTimeout(timeout);
+    	timeout = setTimeout("location.reload(true);",60000);
+  		}
+		</script>
+	</head>
 	<body>
-	<h1 class= "col-xs-9"> 
-	October is Domestic Violence Awareness Month 
-	</h1>
+		<h1 class= "col-xs-12"> 
+			October is Domestic Violence Awareness Month 
+		</h1>
 	<br>
 	<br>
 	<br>
 	<br>
 	<br>
 	<br>
+			<h2 class= "col-xs-12">
+			"On average, <strong>20</strong> people every <strong>minute</strong>  are physically abused by an intimate partner in the United States. During one year, this equates to more than <strong>10 million</strong> women and men."
 	<br>
 	<br>
+	"On average, women will try to leave an abusive relationship <strong>seven times</strong> before they leave for good.""
 	<br>
 	<br>
-	<h2 class= "col-xs-12">
-	"On average, <strong>10</strong> people every <strong>30</strong> seconds are physically abused by an intimate partner in the United States. During one year, this equates to more than 10 million women and men."
-	<br>
-	<br>
-	This page updates every <strong>30</strong> seconds to broadcast the different tweets of those who #WhyIStayed and #WhyILeft</h2>
-
-    		<div class= "col-xs-6">
-    			<h3> Many Stay </h3>
+			This page updates every <strong>minute</strong> to broadcast the different tweets of those who <strong>#WhyIStayed</strong> and <strong>#WhyILeft</strong>, their opinions and personal experiences, and advice for others dealing with domestic violence.
+			</h2>
+	    	<div class= "col-xs-6">
+	    		<h3> Many Stay </h3>
 						<% @unique_stayed_responses.each do |response| %>
-							<h4>
-								<%= response %>
-							</h4>
+							<p>
+								<%if find_link(response) != ""%>
+									<%= remove_link(response) %>
+									<%= link_to "Read more..", find_link(response)%>
+								<%else%>
+									<%= response %>
+								<% end %>
+							</p>
 						<% end %>
 				</div>			
-			<br>
-			<br>
+	<br>
+	<br>
 				<div class= "col-xs-6">
 					<h3> Many Leave </h3>
 						<% @unique_left_responses.each do |response| %>
-							<h4>
-								<%= response %>
-							</h4>
+								<p>
+									<%if find_link(response) != ""%>
+										<%= remove_link(response) %>
+										<%= link_to "Read more..", find_link(response)%>
+									<%else%>
+										<%= response %>
+										<% end %>
+								</p>
 						<% end %>
-			</div>
-		</h3>
+				</div>
 	</body>
 </html>
 
