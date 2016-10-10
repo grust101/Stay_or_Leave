@@ -1,24 +1,13 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Stay || Leave is a Twitter Client application written in Ruby on Rails and delpoyed on Heroku.
 
-Things you may want to cover:
 
-* Ruby version
+## Purpose
+The purpose of this application is to pool together tweets by individual users (no retweets allowed) talking about domestic violence and more specifically, the debate of staying with a partner after domestic violence VS. leaving and seeking help.
 
-* System dependencies
+## Installation
 
-* Configuration
+git clone https://github.com/grust101/Stay_or_Leave.git
+bundle install 
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
